@@ -1,0 +1,973 @@
+<!DOCTYPE HTML>
+<!--
+	Design: Styles by HTML5 UP
+	Premium Minimalist Adaptation for Friends Live Music
+-->
+<html lang="fr">
+	<head>
+		<title>Friends | Groupe de Musique Mariage Avignon & Provence</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Friends - Groupe de musique live haut de gamme pour mariages, cocktails et soirées dansantes autour d'Avignon, dans le Luberon et le Ventoux." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+		<!-- Style Premium Épuré -->
+		<style>
+			:root {
+				--color-lin: #F2EEE6;
+				--color-sauge: #6B7867;
+				--color-sauge-clair: #A3B29A;
+				--color-champagne: #D6B88A;
+				--color-dark: #2C3529;
+			}
+
+			/* Typographie Globale Ajustée (+2 tailles) */
+			body, input, select, textarea {
+				font-family: 'Montserrat', sans-serif !important;
+				background-color: var(--color-lin) !important;
+				color: var(--color-dark) !important;
+				font-size: 16px !important;
+			}
+
+			p {
+				font-size: 1.1em !important;
+				line-height: 1.6 !important;
+				color: var(--color-dark) !important;
+			}
+
+			/* Header Fixé & Épuré */
+			#header {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 1.2em 2em !important;
+				background: var(--color-lin) !important;
+				position: relative !important;
+				height: auto !important;
+				line-height: normal !important;
+			}
+
+			#header h1 {
+				margin: 0 !important;
+				left: auto !important;
+				top: auto !important;
+				height: auto !important;
+				line-height: normal !important;
+			}
+
+			#header h1 a {
+				color: var(--color-sauge) !important;
+				font-weight: 700 !important;
+				letter-spacing: 2px !important;
+				font-size: 1.1em !important;
+				text-decoration: none !important;
+			}
+
+			/* Désactivation de l'ancien menu */
+			#nav, .menuToggle, #menu {
+				display: none !important;
+			}
+
+			/* Style du Logo dans la Bannière */
+			.site-logo {
+				max-width: 120px;
+				height: auto;
+				margin-bottom: 25px;
+				display: inline-block;
+			}
+
+			/* Bannière d'Accueil */
+			#banner {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				text-align: center !important;
+				background-color: var(--color-dark) !important;
+				background-image: linear-gradient(rgba(44, 53, 41, 0.6), rgba(44, 53, 41, 0.75)), url("images/banner.jpg") !important;
+				background-size: cover;
+				background-position: center;
+				padding: 7em 2em 6em 2em !important;
+			}
+
+			#banner .inner {
+				max-width: 850px;
+				margin: 0 auto !important;
+				float: none !important;
+			}
+
+			.banner-tagline {
+				font-size: 1.5em !important;
+				font-weight: 600 !important;
+				margin-bottom: 0.8em !important;
+				color: #ffffff !important;
+			}
+
+			/* Nouveau bloc de transition Vert Sauge */
+			.intro-sauge-block {
+				background-color: var(--color-sauge) !important;
+				padding: 3.5em 2em !important;
+				text-align: center !important;
+			}
+
+			.intro-sauge-block p {
+				color: var(--color-champagne) !important;
+				font-size: 1.25em !important;
+				font-weight: 500 !important;
+				max-width: 850px;
+				margin: 0 auto !important;
+				line-height: 1.6 !important;
+			}
+
+			/* Boutons Réseaux Sociaux */
+			.social-cta-group {
+				display: flex;
+				gap: 20px;
+				justify-content: center;
+			}
+
+			.social-icon-btn {
+				color: #ffffff !important;
+				font-size: 1.5em !important;
+				text-decoration: none;
+				transition: color 0.3s ease, transform 0.3s ease;
+				display: inline-block;
+			}
+
+			.social-icon-btn:hover {
+				color: var(--color-champagne) !important;
+				transform: scale(1.1);
+			}
+
+			/* Blocs Alternés (Spotlights) */
+			.wrapper.alt.style1 {
+				padding: 0 !important;
+				background-color: var(--color-lin) !important;
+			}
+
+			.spotlight {
+				display: flex;
+				align-items: center;
+				background-color: var(--color-lin) !important;
+				border-bottom: 1px solid rgba(107, 120, 103, 0.1);
+				position: relative; /* Indispensable pour les calculs de défilement du script */
+			}
+
+			.spotlight:nth-child(even) {
+				flex-direction: row-reverse;
+			}
+
+			.spotlight .image {
+				width: 50%;
+				align-self: stretch;
+				overflow: hidden;
+			}
+
+			.spotlight .image img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				display: block;
+			}
+
+			.spotlight .content {
+				width: 50%;
+				padding: 3em 4em !important;
+				text-align: left !important;
+			}
+
+			.spotlight .content h2 {
+				color: var(--color-sauge) !important;
+				font-weight: 700 !important;
+				font-size: 1.7em !important;
+				margin-bottom: 0.8em !important;
+			}
+
+			/* Section Prestations (Cartes) */
+			.wrapper.style2 {
+				background-color: #ffffff !important;
+				padding: 4.5em 2em !important;
+			}
+
+			.wrapper.style2 h2 {
+				color: var(--color-sauge) !important;
+				font-size: 1.9em !important;
+			}
+
+			.features-grid {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 25px;
+				justify-content: center;
+				margin-top: 2.5em;
+			}
+
+			.feature-card {
+				background: #F3F3F3  !important;
+				border-radius: 6px;
+				padding: 30px 25px;
+				width: 30%;
+				min-width: 290px;
+				text-align: left;
+				border-top: 4px solid var(--color-sauge-clair) !important;
+				box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+				transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+			}
+
+			.feature-card:hover {
+				transform: translateY(-5px) scale(1.03);
+				box-shadow: 0 12px 30px rgba(44, 53, 41, 0.08);
+			}
+
+			.feature-card h3 {
+				color: var(--color-sauge) !important;
+				font-weight: 700 !important;
+				font-size: 1.4em !important;
+				margin-top: 10px !important;
+			}
+
+			.feature-card.highlighted {
+				border-top: 4px solid var(--color-champagne) !important;
+				background-color: var(--color-lin) !important;
+				box-shadow: 0 10px 30px rgba(107, 120, 103, 0.04);
+			}
+			
+			.feature-card.highlighted:hover {
+				box-shadow: 0 15px 35px rgba(107, 120, 103, 0.12);
+			}
+
+			.card-subtitle {
+				font-weight: 700;
+				color: var(--color-champagne) !important;
+				text-transform: uppercase;
+				font-size: 0.85em;
+				letter-spacing: 1px;
+				margin-bottom: 15px !important;
+			}
+
+			/* --- CARROUSEL INTERACTIF AVEC POP-IN --- */
+			.carousel-wrapper {
+				position: relative;
+				max-width: 100%;
+				margin: 0 auto;
+				display: flex;
+				align-items: center;
+			}
+
+			.gallery-carousel {
+				display: flex;
+				overflow-x: auto;
+				scroll-snap-type: x mandatory;
+				scroll-behavior: smooth;
+				gap: 20px;
+				padding: 15px 5px;
+				scrollbar-width: none; /* Firefox */
+			}
+
+			.gallery-carousel::-webkit-scrollbar {
+				display: none; /* Chrome, Safari */
+			}
+
+			.gallery-item {
+				flex: 0 0 calc(25% - 15px); /* Équilibre parfait : 4 photos visibles sur grand écran */
+				min-width: 260px;
+				scroll-snap-align: start;
+				height: 240px;
+				overflow: hidden;
+				border-radius: 4px;
+				box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+				cursor: pointer;
+				position: relative;
+			}
+
+			.gallery-item img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				transition: transform 0.5s ease, filter 0.3s ease;
+			}
+
+			/* Effet de survol élégant */
+			.gallery-item:hover img {
+				transform: scale(1.05);
+				filter: brightness(0.9);
+			}
+
+			/* Boutons de navigation du carrousel */
+			.carousel-nav-btn {
+				background: rgba(255, 255, 255, 0.95);
+				color: var(--color-sauge);
+				border: none;
+				width: 45px;
+				height: 45px;
+				border-radius: 50%;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				cursor: pointer;
+				z-index: 10;
+				box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+				font-size: 1.2em;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: background 0.3s, color 0.3s;
+			}
+			.carousel-nav-btn:hover {
+				background: var(--color-sauge);
+				color: #ffffff;
+			}
+			.carousel-nav-btn.prev { left: -15px; }
+			.carousel-nav-btn.next { right: -15px; }
+
+			/* STYLE DE LA POP-IN (LIGHTBOX) */
+			.lightbox-overlay {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(44, 53, 41, 0.95); /* Teinte vert sombre Friends */
+				z-index: 2000;
+				display: none;
+				align-items: center;
+				justify-content: center;
+				opacity: 0;
+				transition: opacity 0.3s ease;
+			}
+
+			.lightbox-overlay.active {
+				display: flex;
+				opacity: 1;
+			}
+
+			.lightbox-content {
+				max-width: 90%;
+				max-height: 85%;
+				position: relative;
+			}
+
+			.lightbox-content img {
+				max-width: 100%;
+				max-height: 85vh;
+				object-fit: contain;
+				border-radius: 4px;
+				box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+			}
+
+			.lightbox-close {
+				position: absolute;
+				top: -45px;
+				right: 0;
+				color: #ffffff;
+				font-size: 2em;
+				cursor: pointer;
+				background: none;
+				border: none;
+			}
+			/* ------------------------------------ */
+
+			/* Section Répertoire */
+			.wrapper.style3 {
+				background-color: var(--color-sauge) !important;
+				padding: 4.5em 2em !important;
+			}
+
+			.wrapper.style3 h2 {
+				font-size: 1.9em !important;
+				color: #ffffff !important;
+			}
+
+			.repertoire-container {
+				max-width: 750px;
+				margin: 2.5em auto 0 auto;
+				text-align: left;
+			}
+
+			.rep-category h4 {
+				color: var(--color-champagne) !important;
+				border-bottom: 1px solid rgba(214, 184, 138, 0.2) !important;
+				padding-bottom: 8px;
+				font-size: 1.15em !important;
+				letter-spacing: 1px;
+				margin-bottom: 1em;
+			}
+
+			.tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px;
+				margin-bottom: 1.8em;
+			}
+
+			.tag {
+				background: rgba(255, 255, 255, 0.07) !important;
+				padding: 4px 12px;
+				border-radius: 20px;
+				font-size: 0.85em;
+				border: 1px solid rgba(255, 255, 255, 0.12) !important;
+				color: #ffffff !important;
+			}
+
+			/* Formulaire de Contact */
+			.wrapper.style4 {
+				background-color: var(--color-lin) !important;
+				padding: 4.5em 2em !important;
+			}
+
+			.wrapper.style4 h2 {
+				font-size: 1.9em !important;
+				color: var(--color-sauge) !important;
+			}
+
+			.contact-container {
+				max-width: 750px;
+				margin: 0 auto !important;
+			}
+
+			.contact-form label {
+				color: var(--color-dark) !important;
+				font-weight: 600;
+				margin-bottom: 6px;
+				font-size: 0.9em;
+				text-align: left;
+				display: block;
+			}
+
+			.contact-form input, .contact-form select, .contact-form textarea {
+				background: #ffffff !important;
+				border: 1px solid var(--color-sauge-clair) !important;
+				color: var(--color-dark) !important;
+				border-radius: 4px !important;
+				padding: 0.75em !important;
+			}
+
+			input[type="submit"].primary {
+				background-color: var(--color-sauge) !important;
+				color: #ffffff !important;
+				border-radius: 4px !important;
+				font-weight: 600 !important;
+				letter-spacing: 1px;
+				padding: 0 2.5em !important;
+				height: 3.5em !important;
+				line-height: 3.5em !important;
+				font-size: 0.95em !important;
+				border: none;
+				cursor: pointer;
+			}
+
+			input[type="submit"].primary, button.primary {
+				background-color: var(--color-sauge) !important;
+				color: #ffffff !important;
+				border-radius: 4px !important;
+				font-weight: 600 !important;
+				letter-spacing: 1px;
+				padding: 1.2em 2.5em !important;
+				height: auto !important;
+				width: auto !important;
+				max-width: 100% !important;
+				line-height: 1.4 !important;
+				font-size: 0.95em !important;
+				border: none;
+				cursor: pointer;
+				white-space: normal !important;
+				display: inline-block !important;
+			}
+
+			input[type="submit"].primary:hover, button.primary:hover {
+				background-color: var(--color-dark) !important;
+			}
+
+			#footer {
+				background-color: var(--color-dark) !important;
+				padding: 4em 2em !important;
+			}
+
+			/* Adaptation Mobile & Tablette */
+			@media screen and (max-width: 980px) {
+				.spotlight {
+					flex-direction: column !important;
+				}
+				.spotlight .image, .spotlight .content {
+					width: 100%;
+				}
+				.spotlight .image {
+					height: 250px;
+				}
+				.spotlight .content {
+					padding: 2.5em 1.5em !important;
+				}
+				.features-grid {
+					gap: 15px;
+				}
+				.feature-card {
+					width: 100%;
+				}
+				.gallery-item {
+					flex: 0 0 75%; /* Laisse deviner la photo suivante pour inviter au balayage tactile */
+					height: 200px;
+				}
+				.carousel-nav-btn { display: none; } /* On cache les flèches sur mobile car le tactile suffit */
+			}
+/* Bouton Contact Instagram Court-circuit */
+			.btn-insta-dm {
+				background-color: var(--color-sauge) !important;
+				color: var(--color-champagne) !important;
+				border: 1px solid var(--color-champagne) !important;
+				border-radius: 4px !important;
+				padding: 0.8em 1.8em !important;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				gap: 10px;
+				font-weight: 600;
+				text-decoration: none;
+				margin-top: 10px;
+				transition: background 0.3s, color 0.3s;
+				font-size: 0.95em;
+			}
+			.btn-insta-dm:hover {
+				background-color: var(--color-dark) !important;
+				color: #ffffff !important;
+			}
+			.btn-insta-dm i {
+				font-size: 1.2em;
+			}
+/* --- RÉACTIVATION DES ANIMATIONS SPECTRAL --- */
+			
+			/* 1. L'effet de fondu et zoom sur l'image au survol/apparition */
+			.spotlight .image img {
+				transition: transform 1s ease, opacity 1s ease !important;
+				opacity: 0;
+				transform: scale(1.05);
+			}
+
+			/* 2. L'effet de glissement et fondu sur le texte */
+			.spotlight .content .inner {
+				opacity: 0;
+				transform: translateY(20px);
+				transition: opacity 1.2s ease, transform 1.2s ease !important;
+				transition-delay: 0.3s;
+			}
+
+			/* 3. Déclenchement automatique de l'animation (dès que le bloc est visible) */
+			.spotlight.visible .image img {
+				opacity: 1;
+				transform: scale(1);
+			}
+
+			.spotlight.visible .content .inner {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+		</style>
+	
+<!-- SEO ENHANCEMENTS (non-intrusif) -->
+<link rel="canonical" href="https://USERNAME.github.io/REPO/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Friends | Groupe de musique mariage en Provence" />
+<meta property="og:description" content="Groupe de musique live pour mariages, cocktails et soirées dansantes en Provence (Avignon, Luberon, Ventoux)." />
+<meta property="og:image" content="images/banner.jpg" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Friends | Groupe de musique mariage en Provence" />
+<meta name="twitter:description" content="Musique live haut de gamme pour mariages et événements en Provence." />
+<meta name="twitter:image" content="images/banner.jpg" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Friends",
+  "description": "Groupe de musique live pour mariages, cocktails et soirées dansantes en Provence (Avignon, Luberon, Ventoux).",
+  "areaServed": ["Avignon", "Luberon", "Ventoux", "Provence"],
+  "image": "images/banner.jpg"
+}
+</script>
+
+<!-- /SEO ENHANCEMENTS -->
+
+</head>
+	<body class="is-preload">
+
+		<div id="page-wrapper">
+
+			<!-- Header Épuré -->
+			<header id="header">
+				<h1><a href="index.html">Friends</a></h1>
+			</header>
+
+			<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<div class="logo-container">
+						<img src="images/logo-friends.svg" alt="Friends Live Music Logo" class="site-logo" />
+					</div>
+					<p class="banner-tagline">L'Expérience Musicale Live de votre Mariage en Provence</p>
+					
+					<div class="social-cta-group">
+						<a href="https://www.instagram.com/friendsmusique" class="social-icon-btn icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a>
+						<a href="https://www.facebook.com/VOTRE_PAGE" class="social-icon-btn icon brands fa-facebook-f" target="_blank"><span class="label">Facebook</span></a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Bloc Intermédiaire (Vert Sauge & Texte Champagne) -->
+			<section class="intro-sauge-block">
+				<p>De l'élégance acoustique d'un cocktail dans le Luberon à l'énergie d'une grande soirée live au pied du Mont Ventoux.</p>
+			</section>
+
+			<!-- Conteneur Principal -->
+			<article id="main">
+
+				<!-- À propos (Spotlights) -->
+				<section id="about" class="wrapper alt style1">
+					<!-- Premier bloc (Le mot "spotlight" suffit à déclencher l'effet) -->
+					<section class="spotlight">
+						<div class="image"><img src="images/groupe.jpg" alt="Friends Live Music - Groupe de musique" /></div>
+						<div class="content">
+							<div class="inner">
+								<h2>Plus qu'un concert, une expérience sur-mesure pour un Mariage en Provence</h2>
+								<p>Basé à <strong>Avignon</strong>, notre groupe de musiciens professionnels rayonne en Vaucluse, dans le Luberon et le Ventoux pour sublimer votre jour J, en intérieur comme en extérieur.</p>
+								<p>Notre trio de base est unique : chaque musicien est aussi chanteur. Une guitare aux harmonies riches, un batteur-percussionniste au groove maîtrisé pour vos cocktails, et une flûte traversière qui apporte une signature sonore exclusive, d'une élégance rare.</p>
+								<p>Offrez vous un souvenir musical qui restera pour toujours attaché à <strong>votre Mariage dans notre belle Provence</strong>.</p>
+							</div>
+						</div>
+					</section>
+
+					<!-- Deuxième bloc -->
+					<section class="spotlight">
+						<div class="image"><img src="images/materiel.jpg" alt="Matériel son et lumière professionnel - Friends" /></div>
+						<div class="content">
+							<div class="inner">
+								<h2>Une infrastructure technique haut de gamme dédiée aux Mariages</h2>
+								<p>Parce que la réussite visuelle et sonore de votre événement est non négociable, nous n'utilisons que du matériel pro adapté à l'architecture des domaines provençaux.</p>
+								<p>Une sonorisation cristalline et un show light complet (lyres robotisées, projecteurs architecturaux LED, effets de scène). Nous gérons l'intégralité de la logistique technique pour vous libérer de toute contrainte.</p>
+							</div>
+						</div>
+					</section>
+				</section>
+
+				<!-- Nos Prestations -->
+				<section id="prestations" class="wrapper style2 special">
+					<div class="inner">
+						<header class="major">
+							<h2>Nos Formules pour vos Mariages autour d'Avignon</h2>
+							<p>Des configurations modulables adaptées à chaque temps fort de votre mariage.</p>
+						</header>
+						<div class="features-grid">
+							<div class="feature-card">
+								<div class="icon-header" style="font-size: 1.8rem;">🎵</div>
+								<h3>Vin d'Honneur & Cocktail</h3>
+								<p class="card-subtitle">Formule Trio ou Quatuor</p>
+								<p>La flûte traversière apporte une signature sonore d'un raffinement rare, parfaite pour une réception sous les oliviers. Elle est soutenue par une guitare chaleureuse et une rythmique subtilement dosée pour permettre les conversations.</p>
+							</div>
+							
+							<div class="feature-card">
+								<div class="icon-header" style="font-size: 1.8rem;">⚡</div>
+								<h3>Grande Soirée Dansante</h3>
+								<p class="card-subtitle">Formule Quatuor et plus</p>
+								<p>Le trio s'enrichit d'une basse ou d'un piano. Répertoire Pop, Rock, Funk, Disco et Électro. Inclus : Un show light professionnel (lyres robotisées, effets, fumée) pour transformer votre espace en un véritable concert privé.</p>
+							</div>
+
+							<div class="feature-card highlighted">
+								<div class="icon-header" style="font-size: 1.8rem;">🌟</div>
+								<h3>Le Pack Sérénité</h3>
+								<p class="card-subtitle">Cocktail + Soirée Dansante</p>
+								<p>L'idéal pour votre journée ! Nos équipes gèrent l'intégralité de la logistique, de la sonorisation et de l'éclairage. Profitez de la douceur acoustique en fin d'après-midi, puis de l'énergie d'un concert live jusqu'au bout de la nuit.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Section Galerie Interactive Carrousel + Pop-in -->
+				<section id="galerie" class="wrapper style1" style="padding: 3.5em 2em !important; background-color: #ffffff !important;">
+		
+				</section>
+<!-- Five -->
+					<section class="wrapper style1 align-center">
+						<div class="inner">
+						<h2 style="color: var(--color-sauge) !important; font-size: 1.9em !important;">Quelques images de nos instants Live</h2>
+							<p style="font-size: 1em !important; opacity: 0.8;">Découvrez l'ambiance de nos événements (cliquez pour agrandir).</p>
+						</div>
+
+						<!-- Gallery -->
+							<div class="gallery style2 medium lightbox onscroll-fade-in">
+								<article>
+									<a href="images/gallery/fulls/01.jpg" class="image">
+										<img src="images/gallery/thumbs/01.jpg" alt="" />
+									</a>
+									<div class="caption">
+										
+										<ul class="actions fixed">
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/02.jpg" class="image">
+										<img src="images/gallery/thumbs/02.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<ul class="actions fixed">
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/03.jpg" class="image">
+										<img src="images/gallery/thumbs/03.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<ul class="actions fixed">
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/04.jpg" class="image">
+										<img src="images/gallery/thumbs/04.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<ul class="actions fixed">
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/05.jpg" class="image">
+										<img src="images/gallery/thumbs/05.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<ul class="actions fixed">
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/06.jpg" class="image">
+										<img src="images/gallery/thumbs/06.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<ul class="actions fixed">
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/07.jpg" class="image">
+										<img src="images/gallery/thumbs/07.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<ul class="actions fixed">
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/08.jpg" class="image">
+										<img src="images/gallery/thumbs/08.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<ul class="actions fixed">
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/09.jpg" class="image">
+										<img src="images/gallery/thumbs/09.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<ul class="actions fixed">
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/10.jpg" class="image">
+										<img src="images/gallery/thumbs/10.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<ul class="actions fixed">
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/11.jpeg" class="image">
+										<img src="images/gallery/thumbs/11.jpeg" alt="" />
+									</a>
+									<div class="caption">
+										<ul class="actions fixed">
+										</ul>
+									</div>
+								</article>
+										</ul>
+									</div>
+								</article>
+							</div>
+
+					</section>
+
+
+
+				<!-- Structure HTML de la Pop-in Lightbox (masquée par défaut) -->
+				<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+					<div class="lightbox-content" onclick="event.stopPropagation()">
+						<button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+						<img id="lightboxImg" src="" alt="Agrandissement" />
+					</div>
+				</div>
+
+				<!-- Notre Répertoire -->
+				<section id="repertoire" class="wrapper style3 special">
+					<div class="inner">
+						<header class="major">
+							<h2>Notre Univers Musical</h2>
+							<p style="color: #ffffff !important;">Un répertoire vivant, varié et taillé sur-mesure pour le live.</p>
+						</header>
+						<div class="repertoire-container">
+							<div class="rep-category">
+								<h4>Groove & International</h4>
+								<div class="tags">
+									<span class="tag">Coldplay</span><span class="tag">The Weeknd</span><span class="tag">Daft Punk</span>
+									<span class="tag">Queen</span><span class="tag">Ed Sheeran</span><span class="tag">Oasis</span>
+									<span class="tag">Red Hot Chili Peppers</span><span class="tag">Sting & The Police</span>
+								</div>
+							</div>
+							<div class="rep-category">
+								<h4>Soul, Funk & Légendes</h4>
+								<div class="tags">
+									<span class="tag">Michael Jackson</span><span class="tag">Stevie Wonder</span><span class="tag">Elton John</span>
+									<span class="tag">James Brown</span><span class="tag">Kool & The Gang</span><span class="tag">Earth Wind & Fire</span>
+								</div>
+							</div>
+							<div class="rep-category">
+								<h4>Pop Rock & Chanson Française</h4>
+								<div class="tags">
+									<span class="tag">Francis Cabrel</span><span class="tag">De Palmas</span><span class="tag">Tryo</span>
+									<span class="tag">France Gall</span><span class="tag">Jean-Jacques Goldman</span><span class="tag">Les Rita Mitsouko</span>
+									<span class="tag">Michel Berger</span><span class="tag">Stromae</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Contact -->
+				<section id="contact" class="wrapper style4">
+					<div class="contact-container">
+						<header class="major special" style="text-align: center; margin-bottom: 2.5em;">
+							<h2>Créons ensemble la bande-son de votre mariage</h2>
+							<p style="margin-bottom: 1em !important;">Tarifs transparents comprenant l'intégralité du matériel son & lumière professionnel.</p>
+							
+							<!-- Alternative Contact Rapide Instagram -->
+							<p style="font-size: 0.95em !important; opacity: 0.85; margin-bottom: 0.5em !important;">Vous préférez la rapidité des réseaux sociaux ?</p>
+							<a href="https://ig.me/m/friendsmusique" class="btn-insta-dm" target="_blank">
+								<i class="icon brands fa-instagram"></i> Discuter en MP sur Instagram
+							</a>
+						</header>
+						
+						<form method="post" action="https://formsubmit.co/votre.email@gmail.com" class="contact-form">
+							<input type="hidden" name="_subject" value="Nouvelle demande de devis - Friends Live Music">
+							<input type="hidden" name="_template" value="table">
+							
+							<div class="row gtr-uniform">
+								<div class="col-6 col-12-xsmall">
+									<label for="name">Nom des futurs mariés / Contact</label>
+									<input type="text" name="name" id="name" placeholder="Ex: Camille & Pierre" required />
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<label for="email">Adresse Email</label>
+									<input type="email" name="email" id="email" placeholder="mariage@exemple.com" required />
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<label for="date">Date de l'événement</label>
+									<input type="date" name="date" id="date" required />
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<label for="location">Lieu du mariage (Ville ou Domaine)</label>
+									<input type="text" name="location" id="location" placeholder="Ex: Domaine de Gordes, Mas à Saint-Rémy" required />
+								</div>
+								<div class="col-12">
+									<label for="formule">Formule souhaitée</label>
+									<select name="formule" id="formule" required>
+										<option value="">-- Sélectionnez une option --</option>
+										<option value="cocktail">Formule Cocktail & Vin d'Honneur seul</option>
+										<option value="soiree">Formule Grande Soirée Dansante seule</option>
+										<option value="serenite">Pack Sérénité (Cocktail + Soirée Dansante)</option>
+										<option value="sur-mesure">Demande sur-mesure / Autre événement</option>
+									</select>
+								</div>
+								<div class="col-12">
+									<label for="message">Dites-nous en plus sur vos attentes (Ambiance, options...)</label>
+									<textarea name="message" id="message" placeholder="Décrivez le mariage de vos rêves..." rows="5"></textarea>
+								</div>
+								<div class="col-12" style="text-align: center; margin-top: 2em;">
+									<button type="submit" class="primary">Obtenir mon devis personnalisé gratuit</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</section>
+
+			</article>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons" style="text-align: center; margin-bottom: 1.5em; list-style: none; padding: 0;">
+					<li style="display: inline-block; margin: 0 10px;"><a href="https://www.facebook.com/VOTRE_PAGE" class="icon brands fa-facebook-f" target="_blank" style="color: #ffffff;"><span class="label">Facebook</span></a></li>
+					<li style="display: inline-block; margin: 0 10px;"><a href="https://www.instagram.com/VOTRE_COMPTE" class="icon brands fa-instagram" target="_blank" style="color: #ffffff;"><span class="label">Instagram</span></a></li>
+				</ul>
+				<ul class="copyright" style="text-align: center; font-size: 0.8em; opacity: 0.6; list-style: none; padding: 0; color: #ffffff;">
+					<li>&copy; Friends. Tous droits réservés.</li>
+					<li>Secteur Provence (Avignon, Luberon, Ventoux)</li>
+				</ul>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<!-- Script JS sur-mesure pour la gestion du Carrousel et de la Pop-in -->
+		<script>
+			// Fonction pour faire défiler le carrousel via les flèches
+			function scrollCarousel(direction) {
+				const carousel = document.getElementById('friendsCarousel');
+				const scrollAmount = carousel.offsetWidth * 0.75;
+				carousel.scrollBy({
+					left: direction * scrollAmount,
+					behavior: 'smooth'
+				});
+			}
+
+			// Fonction pour ouvrir la pop-in
+			function openLightbox(element) {
+				const imgSrc = element.querySelector('img').src;
+				const lightbox = document.getElementById('lightbox');
+				const lightboxImg = document.getElementById('lightboxImg');
+				
+				lightboxImg.src = imgSrc;
+				lightbox.classList.add('active');
+				document.body.style.overflow = 'hidden'; // Bloque le scroll du site en arrière-plan
+			}
+
+			// Fonction pour fermer la pop-in
+			function closeLightbox() {
+				const lightbox = document.getElementById('lightbox');
+				lightbox.classList.remove('active');
+				document.body.style.overflow = 'auto'; // Réactive le scroll du site
+			}
+		
+// Spotlight animation
+document.addEventListener("DOMContentLoaded",()=>{const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible");});},{threshold:0.2});document.querySelectorAll(".spotlight").forEach(s=>obs.observe(s));});
+</script>
+
+	</body>
+</html>
