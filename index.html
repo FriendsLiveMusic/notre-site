@@ -578,7 +578,121 @@
 				opacity: 1;
 				transform: translateY(0);
 			}
+/* --- SECTION CARROUSEL DES AVIS CLIENTS --- */
+.wrapper.style-reviews {
+    background-color: var(--color-lin) !important;
+    padding: 5em 2em !important;
+    text-align: center;
+}
 
+.wrapper.style-reviews h2 {
+    color: var(--color-sauge) !important;
+    font-size: 1.9em !important;
+    margin-bottom: 0.5em;
+}
+
+/* Conteneur du carrousel */
+.reviews-carousel-container {
+    max-width: 1100px;
+    margin: 3em auto 0 auto;
+    position: relative;
+}
+
+.reviews-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 25px;
+    padding: 15px 5px;
+    scrollbar-width: none; /* Cache la scrollbar sur Firefox */
+}
+
+.reviews-carousel::-webkit-scrollbar {
+    display: none; /* Cache la scrollbar sur Chrome/Safari */
+}
+
+/* Cartes des avis */
+.review-card {
+    flex: 0 0 calc(33.333% - 17px);
+    min-width: 300px;
+    scroll-snap-align: start;
+    background: #ffffff !important;
+    border-radius: 6px;
+    padding: 35px 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    border-top: 4px solid var(--color-champagne) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(107, 120, 103, 0.08);
+}
+
+.review-stars {
+    color: var(--color-champagne) !important;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.review-text {
+    font-family: 'Montserrat', sans-serif !important;
+    font-style: italic;
+    font-size: 0.95em !important;
+    line-height: 1.6 !important;
+    color: var(--color-dark) !important;
+    margin-bottom: 25px !important;
+}
+
+.review-author {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700;
+    font-size: 0.9em;
+    color: var(--color-sauge) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.review-meta {
+    font-size: 0.8em;
+    color: var(--color-dark);
+    opacity: 0.6;
+    margin-bottom: 15px;
+}
+
+/* Liens de vérification de l'avis (Google / Insta) */
+.review-verify-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-decoration: none !important;
+    color: var(--color-sauge) !important;
+    border: 1px solid rgba(107, 120, 103, 0.2);
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+    width: fit-content;
+}
+
+.review-verify-link:hover {
+    background-color: var(--color-sauge) !important;
+    color: #ffffff !important;
+    border-color: var(--color-sauge) !important;
+}
+
+/* Version Tablette et Mobile */
+@media screen and (max-width: 980px) {
+    .review-card {
+        flex: 0 0 85%; /* Laisse deviner la carte suivante pour inviter au balayage */
+    }
+}
 		</style>
 	
 <!-- SEO ENHANCEMENTS (non-intrusif) -->
@@ -865,7 +979,66 @@
 						</div>
 					</div>
 				</section>
+<!-- Section Carrousel de Témoignages -->
+<section id="temoignages" class="wrapper style-reviews">
+    <div class="inner">
+        <header class="major" style="text-align: center;">
+            <h2>Ce que nos mariés en disent</h2>
+            <p style="max-width: 700px; margin: 0 auto;">Chaque mariage est unique. Découvrez les retours d'expérience de ceux qui nous ont fait confiance pour leur jour J.</p>
+        </header>
 
+        <div class="reviews-carousel-container">
+            <div class="reviews-carousel">
+
+                <!-- Avis 1 (Lien Instagram) -->
+                <div class="review-card">
+                    <div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"Vous avez bien plus que contribué à la réussite de notre mariage. Merci encore mille fois pour tout. Vous êtes une très belle équipe, votre énergie et votre complicité vous réunissent. Ne changez rien !"</p>
+                    </div>
+                    <div>
+                        <div class="review-author">L. & D.</div>
+                        <div class="review-meta">Mariage au Domaine Des Grand Singes Sarrians</div>
+                        <a href="https://www.instagram.com/stories/highlights/18418108570195933/" class="review-verify-link" target="_blank">
+                            <i class="icon brands fa-instagram"></i> Voir sur Instagram
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Avis 2 (Lien Google) -->
+                <div class="review-card">
+                    <div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"Je recommande vivement ce groupe de musique pour tous types d'événements et qui saura s'adapter et vous proposer quelque chose qui vous ressemble. Merci d'avoir vibré à notre mariage c'était le top du top !"</p>
+                    </div>
+                    <div>
+                        <div class="review-author">M. & A.</div>
+                        <div class="review-meta">Mariage dans le Luberon</div>
+                        <a href="https://g.page/r/Cd6SxAuaYk13EBM/review" class="review-verify-link" target="_blank">
+                            <i class="icon brands fa-google"></i> Avis Google Vérifié
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Avis 3 (Lien Instagram) -->
+                <div class="review-card">
+                    <div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"Un grand merci à toute l’équipe Friends pour ce merveilleux moment musical. Vous êtes tous en phase et vous jouez naturellement ensemble, cela se ressent… Vous avez fait l’unanimité à notre soirée, vous avez mis le feu🔥"</p>
+                    </div>
+                    <div>
+                        <div class="review-author">M. & P.</div>
+                        <div class="review-meta">Mariage au pied du Ventoux</div>
+                        <a href="https://www.instagram.com/stories/highlights/18418108570195933/" class="review-verify-link" target="_blank">
+                            <i class="icon brands fa-instagram"></i> Voir sur Instagram
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
 				<!-- Contact -->
 				<section id="contact" class="wrapper style4">
 					<div class="contact-container">
